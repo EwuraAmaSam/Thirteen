@@ -80,7 +80,7 @@ p{
     margin-top: 15px;
     margin: 4px;
     animation-name: roll;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -88,18 +88,27 @@ p{
 
 
 /* Animations for the balls */
-@keyframes roll {
+
+  @keyframes roll {
     0% {
-      transform: translateX(-50px);
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
     }
     100% {
       transform: translateX(100%);
+      opacity: 0;
     }
   }
-
+  
   .ball:nth-child(1) {
     left: 0;
-    animation-delay: 0.1s;
+    animation-delay: 0s;
   }
   
   .ball:nth-child(2) {
@@ -109,21 +118,23 @@ p{
   
   .ball:nth-child(3) {
     left: 70px;
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
   }
   
   .ball:nth-child(4) {
     left: 80px;
-    animation-delay: 0.4s;
+    animation-delay: 0.6s;
   }
   
   .ball:nth-child(5) {
     left: 90px;
-    animation-delay: 0.5s;
+    animation-delay: 0.8s;
   }
+  
 
 
-/* Styles for all devices */
+
+
 
 /* Mobile devices */
 @media only screen and (max-width: 767px) {
@@ -151,13 +162,4 @@ p{
 
   }
   
-  /* Tablets */
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Styles specific to tablets */
-  }
-  
-  /* Desktops and larger screens */
-  @media only screen and (min-width: 1024px) {
-    /* Styles specific to desktops and larger screens */
-  }
   
