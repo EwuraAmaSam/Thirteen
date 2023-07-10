@@ -80,7 +80,7 @@ p{
     margin-top: 15px;
     margin: 4px;
     animation-name: roll;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
