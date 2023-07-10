@@ -1,4 +1,5 @@
 var textarea = document.querySelector(".textarea")
+const generate = document.querySelector(".generate")
 var text = textarea.value
 
 var phrase = text.split(" ")
@@ -18,8 +19,13 @@ var ALPH = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 
 
 
-let final = ""
+// let final = ""
 function Display(){
+    var text = textarea.value; 
+    var phrase = text.split(" ")
+    let final = ""
+
+    // Loop through and convert each letter to another using ROT13
     for (var i = 0; i < phrase.length; i++){
         var word = phrase[i]
         for (var j = 0; j < word.length; j++){
@@ -47,26 +53,30 @@ function Display(){
     }
     console.log(final)
 
-    }
-    function copyText() {
-        var input = document.querySelector(".copy")
-      
-        var tempTextArea = document.createElement('textarea');
-      
-        tempTextArea.value = final;
-      
-        document.body.appendChild(tempTextArea);
-      
-        tempTextArea.select();
-      
-        document.execCommand('copy');
-      
-        document.body.removeChild(tempTextArea);
-      
-        alert('Text copied!');
-        function Refresh(){
-            location.reload()
-            document.querySelector(".textarea").value = ""
-        }
-        Refresh()
-      }
+    var tempTextArea = document.createElement('textarea');
+
+  // Set the value of the textarea to the text you want to copy
+  tempTextArea.value = final;
+
+  // Append the textarea to the DOM
+  document.body.appendChild(tempTextArea);
+
+  // Select the text within the textarea
+  tempTextArea.select();
+
+  // Copy the selected text to the clipboard
+  document.execCommand('copy');
+
+  // Remove the temporary textarea element from the DOM
+  document.body.removeChild(tempTextArea)
+    alert("Copied")
+    location.reload()
+}
+generate.addEventListener('click', Display)
+
+
+
+
+
+
+
