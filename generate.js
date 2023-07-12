@@ -1,8 +1,6 @@
 var textarea = document.querySelector(".textarea")
 const generate = document.querySelector(".generate")
-var text = textarea.value
 
-var phrase = text.split(" ")
 
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 
@@ -17,11 +15,8 @@ var ALPH = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 'V', 'W', 'X', 'Y', 'Z'];
 
 
-
-
-// let final = ""
 function Display(){
-    var text = textarea.value; 
+    var text = textarea.value
     var phrase = text.split(" ")
     let final = ""
 
