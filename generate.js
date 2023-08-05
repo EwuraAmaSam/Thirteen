@@ -65,7 +65,7 @@ function Display(){
   // Remove the temporary textarea element from the DOM
   document.body.removeChild(tempTextArea)
     alert("Copied")
-    location.reload()
+    // location.reload()
 }
 generate.addEventListener('click', Display)
 

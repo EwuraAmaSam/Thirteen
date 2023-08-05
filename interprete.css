@@ -53,6 +53,13 @@ p{
     border: 2px black solid;
 }
 
+.box{
+  display:flex;
+  flex-direction: column;
+  height: auto;
+  width: 300px;
+}
+
 
 .rol-balls{
     display: flex;
